@@ -1,0 +1,54 @@
+header {
+    background-color: #CCCCCC;
+    margin: 3px;
+    padding: 3px;
+    width: 500px;
+    text-align: center;
+    border:0.15em solid rgba(190, 136, 35, 0.849);
+}
+
+header p {
+    display: inline-block;
+    font-size: 1em;
+}
+
+.sword:hover {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+body {
+    max-width: 500px;
+    margin: auto;
+    background-image: url(background.jpg);
+}
+
+button {
+    display:inline-block;
+    width: 30%;
+    padding:0.2em 1.45em;
+    margin:0.1em;
+    border:0.15em solid rgba(190, 136, 35, 0.849);
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#000000;
+    background-color:#CCCCCC;
+    text-align:center;
+    position:relative;
+}
+
+button#sword:hover {
+    text-transform: uppercase;
+    font-weight: 900;
+    
+}
+
+button#reset {
+    display: block;
+    margin: auto;
+    
+}
+button:hover {
+    background-color:#CCCCF0;
+    border: 0.15em solid #CCCCF0;
+}

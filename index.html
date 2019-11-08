@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Rock paper SWORD!</title>
+  </head>
+  <body>
+    <header>
+      <p>Rock</p>
+      <p>Paper</p>
+      <p class="sword">Sword!</p>
+    </header>
+    <div class="reset">
+        <button id="reset" onclick="buttonPress(this)">Reset</button>
+    </div>
+    <div>
+      <p id="pWins">Player wins</p>
+      <p id="cWins"> Computer wins</p>
+      <p id="draws">Draws</p>
+    </div>
+    <div>
+      <img id="cMove" src="rock.png"></img>
+      <img id="pMove" src="question.png"></img>
+    </div>
+    <div class="selection">
+        <button id="rock" onclick="buttonPress(this)">Rock</button>
+        <button id="paper" onclick="buttonPress(this)"> Paper</button>
+        <button id="sword" onclick="buttonPress(this)">Sword!</button>
+    </div>
+    
+    </body>
+  <script type="text/javascript" src="script.js"></script>
