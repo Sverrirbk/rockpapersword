@@ -21,13 +21,14 @@ body {
     max-width: 500px;
     margin: auto;
     background-image: url(background.jpg);
+    text-align: center
 }
 
 button {
     display:inline-block;
-    width: 30%;
+    width: 150px;
     padding:0.2em 1.45em;
-    margin:0.1em;
+    margin:auto;
     border:0.15em solid rgba(190, 136, 35, 0.849);
     box-sizing: border-box;
     text-decoration:none;
@@ -51,4 +52,16 @@ button#reset {
 button:hover {
     background-color:#CCCCF0;
     border: 0.15em solid #CCCCF0;
+}
+
+.images {
+    
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    padding: 10px;
 }

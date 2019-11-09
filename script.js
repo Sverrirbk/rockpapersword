@@ -138,12 +138,12 @@ function updateScore(results) {
     }
     else {
         drawScore++;
-        draws.innerHTML = "Draws" + drawScore;
+        draws.innerHTML = "Draws " + drawScore;
 
     }
 }
 
 function updateMoves(computer, player) {
-    cMove.innerHTML = "Computer move " + computer;
-    pMove.innerHTML = '<a href="${player}.png">link text</a>'; 
+    document.getElementById("cMove").src = computer + ".png";
+    document.getElementById("pMove").src = player + ".png"; 
 }
