@@ -10,14 +10,17 @@
       <p>Paper</p>
       <p class="sword">Sword!</p>
     </header>
+    
     <div class="reset">
         <button id="reset" onclick="buttonPress(this)">Reset</button>
     </div>
-    <div>
+
+    <div id="winCounter">
       <p id="pWins">Player wins</p>
       <p id="cWins"> Computer wins</p>
       <p id="draws">Draws</p>
     </div>
+
     <div class="images">
       <img id="cMove" src="exclamation.png"></img>
       <img id="pMove" src="exclamation.png"></img>
@@ -27,6 +30,22 @@
         <button id="paper" onclick="buttonPress(this)"> Paper</button>
         <button id="sword" onclick="buttonPress(this)">Sword!</button>
     </div>
+
+    <div>
+        <p id="roundResult">Result</p>
+    </div>
+
+    <section class="picks">
+      <div class="pickDiv" id="playerPickDiv">
+        <p id="playerPick">Player pick</p>
+        <img id="pPick" src="exclamation.png"></img>
+      </div>
+      <div class="pickDiv" id="computerPickDiv">
+        <p id="computerPick">Computer pick</p>
+        <img id="cPick" src="exclamation.png"></img>
+      </div>
+      
+    </section>
     
     </body>
   <script type="text/javascript" src="script.js"></script>

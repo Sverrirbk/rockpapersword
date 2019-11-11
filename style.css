@@ -2,7 +2,7 @@ header {
     background-color: #CCCCCC;
     margin: 3px;
     padding: 3px;
-    width: 500px;
+    max-width: 500px;
     text-align: center;
     border:0.15em solid rgba(190, 136, 35, 0.849);
 }
@@ -24,9 +24,20 @@ body {
     text-align: center
 }
 
+div#winCounter{
+    
+    max-width: 500px;
+}
+
+div#winCounter p {
+    max-width: 133px;
+    margin: auto;
+    display: inline-block;
+}
+
 button {
     display:inline-block;
-    width: 150px;
+    max-width: 150px;
     padding:0.2em 1.45em;
     margin:auto;
     border:0.15em solid rgba(190, 136, 35, 0.849);
@@ -36,6 +47,10 @@ button {
     background-color:#CCCCCC;
     text-align:center;
     position:relative;
+}
+
+button:disabled {
+    background-color: antiquewhite;
 }
 
 button#sword:hover {
@@ -50,18 +65,36 @@ button#reset {
     
 }
 button:hover {
-    background-color:#CCCCF0;
-    border: 0.15em solid #CCCCF0;
-}
-
-.images {
-    
+    background-color:rgb(236, 136, 70);
+    border: 0.15em solid rgba(190, 136, 35, 0.849);
 }
 
 img {
-    width: 150px;
+    max-width: 150px;
     height: 150px;
     display: block;
     margin: auto;
     padding: 10px;
+}
+
+section.picks {
+    max-width: 500px;
+    
+}
+
+.pickDiv {
+    display: inline-block;
+    max-width: 133px;
+    margin: auto;
+}
+
+.pickDiv img {
+    max-width: 30px;
+    height: 30px;
+    margin: auto;
+    padding: 0.2px;
+}
+
+#computerPick, #playerPick {
+    margin-bottom: 2px;
 }
