@@ -8,4 +8,7 @@ Make variables with easy, good names
 More comments
 Push more often.
 
+Added 17.11.2019
+Fixed history, added some comments
+
 Kv. Sverrir

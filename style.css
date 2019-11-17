@@ -77,7 +77,7 @@ img {
     padding: 10px;
 }
 
-section.picks {
+section.picks, section.history {
     max-width: 500px;
     
 }
@@ -88,6 +88,14 @@ section.picks {
     margin: auto;
 }
 
+.history div, .historyDiv p {
+    display: inline-block;
+    max-width: 133px;
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+}
+
 .pickDiv img {
     max-width: 30px;
     height: 30px;
@@ -95,6 +103,15 @@ section.picks {
     padding: 0.2px;
 }
 
-#computerPick, #playerPick {
+.historyDiv img {
+    max-width: 30px;
+    height: 30px;
+    margin: auto;
+    padding: 0.2px;
+}
+
+#computerPick, #playerPick, #pHistory, #cHistory {
     margin-bottom: 2px;
 }
+
+

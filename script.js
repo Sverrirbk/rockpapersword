@@ -35,17 +35,22 @@ function buttonPress(e){
     }
     // Reset button
     else {
+        // reset score
         playerScore = 0;
         computerScore = 0;
         drawScore = 0;
+        // reset text
         pWins.innerHTML = "Player wins";
         cWins.innerHTML = "Computer wins";
         draws.innerHTML = "Draws";
+        // enable buttons
         document.getElementById("rock").disabled = false;
         document.getElementById("paper").disabled = false;
         document.getElementById("sword").disabled = false;
-
-
+        // remove history
+        const historyImgs = document.getElementsByClassName("historyPick");
+        while (historyImgs.length > 0) historyImgs[0].remove();
+        // replace all images with question.png
         var imgs = document.getElementsByTagName("img");
         for(var i=0, l=imgs.length; i<l; i++) {
             imgs[i].src = "question.png";
@@ -57,10 +62,11 @@ function buttonPress(e){
 // Play a round
 function game(playerChoice) { 
      
-    compMove = computerPlay();
+    compMove = computerPlay(); // get computer move
     playerMove = playerChoice;
     let round = (RockPaperSword(playerMove, compMove));
 
+    // updating winner
     updateMoves(compMove, playerMove)
     if (round == "draw") {
     }
@@ -75,17 +81,15 @@ function game(playerChoice) {
         console.log("ERROR")
     }
     updateScore(round);
+
     // Check if game is over
     checkWinner(playerScore, computerScore);
 }
 
-// Get results
+// Get results of game round
 function RockPaperSword(player, computer) {
     console.log(player);
     console.log(computer);
-    let pWins;
-    let cWins;
-    let draws;
     updateChoice(player, computer)
     if (player == "rock") {
         if (computer =="rock") {
@@ -123,20 +127,25 @@ function RockPaperSword(player, computer) {
         }
     }
 } 
-function updateChoice(player, computer) {
-        
+
+// updates image to history and displays 
+function updateChoice(player, computer) { 
     
     playerPick.innerHTML = "Player picked " + player.toUpperCase();
     document.getElementById("pPick").src = player + ".png"; 
     var playerImg = document.createElement('img')
     playerImg.src = player + ".png";
-    document.getElementById('playerPickDiv').appendChild(playerImg);
+    playerImg.setAttribute("id", "pHistoryPick")
+    playerImg.setAttribute("class", "historyPick")
+    document.getElementById('pHistory').appendChild(playerImg);
 
     computerPick.innerHTML = "Computer picked " + computer.toUpperCase();
     document.getElementById("cPick").src = computer + ".png";
     var compImg = document.createElement('img')
     compImg.src = computer + ".png";
-    document.getElementById('computerPickDiv').appendChild(compImg);
+    compImg.setAttribute("id", "cHistoryPick")
+    compImg.setAttribute("class", "historyPick")
+    document.getElementById('cHistory').appendChild(compImg);
 }
 
 function updateScore(results) {
@@ -158,6 +167,7 @@ function updateScore(results) {
     }
 }
 
+// adds images to main board
 function updateMoves(computer, player) {
     document.getElementById("cMove").src = computer + ".png";
     document.getElementById("pMove").src = player + ".png"; 
